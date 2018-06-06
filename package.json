@@ -1,0 +1,17 @@
+{
+  "name": "ng-spa-land",
+  "version": "1.0.0",
+  "description": "messing around with micro frontend frameworks",
+  "main": "index.js",
+  "scripts": { },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moosebot/ng-spa-land.git"
+  },
+  "author": "Austin Valle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moosebot/ng-spa-land/issues"
+  },
+  "homepage": "https://github.com/moosebot/ng-spa-land#readme"
+}
