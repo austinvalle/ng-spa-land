@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "messing around with micro frontend frameworks",
   "main": "index.js",
-  "scripts": { },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/moosebot/ng-spa-land.git"
@@ -13,5 +13,29 @@
   "bugs": {
     "url": "https://github.com/moosebot/ng-spa-land/issues"
   },
-  "homepage": "https://github.com/moosebot/ng-spa-land#readme"
+  "homepage": "https://github.com/moosebot/ng-spa-land#readme",
+  "dependencies": {
+    "single-spa": "^3.9.1",
+    "single-spa-angular-cli": "^0.4.2",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "@angular-devkit/core": "^0.6.8",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-function-bind": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "cpx": "^1.5.0",
+    "css-loader": "^0.28.11",
+    "html-loader": "^0.5.5",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.11.0",
+    "webpack-dev-server": "^3.1.4"
+  }
 }

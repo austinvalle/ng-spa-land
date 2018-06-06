@@ -1,0 +1,27 @@
+[
+    {
+        "name": "home",
+        "selector": "spa-home-app",
+        "baseHref": "/home",
+        "matchRoute": "/home/",
+        "isDefaultApp": true
+    },
+    {
+        "name": "accounts",
+        "selector": "spa-accounts-app",
+        "baseHref": "/accounts",
+        "matchRoute": "/accounts/"
+    },
+    {
+        "name": "giftcards",
+        "selector": "spa-giftcards-app",
+        "baseHref": "/giftcards",
+        "matchRoute": "/giftcards/"
+    },
+    {
+        "name": "schedules",
+        "selector": "spa-schedules-app",
+        "baseHref": "/schedules",
+        "matchRoute": "/schedules/"
+    }
+]
