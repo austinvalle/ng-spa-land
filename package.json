@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "messing around with micro frontend frameworks",
   "main": "index.js",
-  "scripts": {},
+  "scripts": { },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/moosebot/ng-spa-land.git"

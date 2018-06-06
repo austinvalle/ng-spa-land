@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  // tslint:disable-next-line:component-selector
+  selector: 'spa-gift-cards-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

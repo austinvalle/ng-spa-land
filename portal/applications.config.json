@@ -14,9 +14,9 @@
     },
     {
         "name": "giftcards",
-        "selector": "spa-giftcards-app",
-        "baseHref": "/giftcards",
-        "matchRoute": "/giftcards/"
+        "selector": "spa-gift-cards-app",
+        "baseHref": "/gift-cards",
+        "matchRoute": "/gift-cards/"
     },
     {
         "name": "schedules",
