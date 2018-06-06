@@ -5,26 +5,38 @@ const applications = require('./portal/applications.config.json');
 const PORT = 8080;
 
 const devApplications = {
-  // menu: 'http://localhost:4200',
-  // home: 'http://localhost:4201',
-  // app1: 'http://localhost:4202',
-  // help: 'http://localhost:4203'
+  // spa-accounts: 'http://localhost:4200',
+  // spa-gift-cards: 'http://localhost:4201',
+  // spa-home: 'http://localhost:4202',
+  // spa-schedules: 'http://localhost:4203'
 };
 
 module.exports = {
+  mode: 'development',
   entry: [
     __dirname + '/portal/main.js',
     __dirname + '/portal/main.css'
   ],
+  optimization: {
+    splitChunks: {
+        cacheGroups: {
+            commons: {
+                test: /[\\/]node_modules[\\/]/,
+                name: "vendors",
+                chunks: "all"
+            }
+        }
+    }
+},
   output: {
-    path: process.cwd() + '/build',
+    path: process.cwd() + '/dist',
     filename: '[name].js',
-    publicPath: '/build/',
+    publicPath: '/dist/',
   },
   devtool: 'inline-source-map',
   devServer: {
     port: PORT,
-    publicPath: '/build/',
+    publicPath: '/dist/',
     contentBase: './',
     historyApiFallback: true,
     proxy: getProxyConfig(applications, devApplications),
@@ -53,13 +65,7 @@ module.exports = {
         query: getBabelConfig(),
       }
     ],
-  },
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'common',
-      minChunks: module => module.context && module.context.indexOf('node_modules') !== -1
-    }),
-  ],
+  }
 };
 
 function getBabelConfig() {
