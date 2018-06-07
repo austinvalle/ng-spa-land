@@ -10,9 +10,13 @@
   <script src="elements.js"></script>
 </head>
 <body>
-  <app-spa-element-button label="First Value"></app-spa-element-button>
-
   <script>
+    let spa = document.createElement('app-spa-element-button');
+    spa.setAttribute('label', 'DYNAMIC VALUE');
+
+    let ele = document.body;
+    ele.appendChild(spa);
+
     const button = document.querySelector('app-spa-element-button');
     button.addEventListener('action', (event) => {
       console.log(`action emitted: ${event.detail}`);
