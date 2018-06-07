@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SpaElements</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="elements.js"></script>
+</head>
+<body>
+  <app-spa-element-button label="First Value"></app-spa-element-button>
+
+  <script>
+    const button = document.querySelector('app-spa-element-button');
+    button.addEventListener('action', (event) => {
+      console.log(`action emitted: ${event.detail}`);
+    })
+    setTimeout(() => button.label = 'Second Value', 3000);
+  </script>
+</body>
+</html>
