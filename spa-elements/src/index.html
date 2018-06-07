@@ -7,21 +7,50 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script src="elements.js"></script>
 </head>
 <body>
   <script>
+
+    let iframe = document.createElement('iframe');
+    let script = document.createElement('script');
+    script.src = 'elements.1.js';
+
     let spa = document.createElement('app-spa-element-button');
     spa.setAttribute('label', 'DYNAMIC VALUE');
+    spa.setAttribute('id', 'btn-1');
+
+    iframe.appendChild(script);
+    iframe.appendChild(spa);
+
+
+    let iframe2 = document.createElement('iframe');
+    let script2 = document.createElement('script');
+    script2.src = 'elements.js';
+   
+    let spa2 = document.createElement('app-spa-element-button-2');
+    spa2.setAttribute('label', 'DYNAMIC VALUE 2');
+    spa2.setAttribute('id', 'btn-2');
+
+    iframe2.appendChild(script2);
+    iframe2.appendChild(spa2);
 
     let ele = document.body;
-    ele.appendChild(spa);
+    ele.appendChild(iframe);
+    ele.appendChild(iframe2);
 
-    const button = document.querySelector('app-spa-element-button');
+
+    
+    const button = document.getElementById('btn-1');
     button.addEventListener('action', (event) => {
-      console.log(`action emitted: ${event.detail}`);
+      console.log(`action emitted for btn 1: ${event.detail}`);
     })
     setTimeout(() => button.label = 'Second Value', 3000);
+
+    const button2 = document.getElementById('btn-2');
+    button2.addEventListener('action', (event) => {
+      console.log(`action emitted for btn 2: ${event.detail}`);
+    })
+    setTimeout(() => button2.label = 'third Value', 3000);
   </script>
 </body>
 </html>

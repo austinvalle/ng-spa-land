@@ -18,7 +18,7 @@ import { SpaElementButtonComponent } from './spa-element-button/spa-element-butt
 export class AppModule {
   constructor(private injector: Injector) {
     const customButton = createCustomElement(SpaElementButtonComponent, { injector });
-    customElements.define('app-spa-element-button', customButton);
+    customElements.define('app-spa-element-button-2', customButton);
   }
 
   ngDoBootstrap() {}

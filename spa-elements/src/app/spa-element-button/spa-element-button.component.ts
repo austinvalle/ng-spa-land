@@ -9,7 +9,7 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
     button {
       border: solid 3px;
       padding: 8px 10px;
-      background: #bada55;
+      background: #00FF00;
       font-size: 20px;
     }
   `],
